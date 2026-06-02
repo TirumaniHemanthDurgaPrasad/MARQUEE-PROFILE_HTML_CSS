@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMYShow</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nav{
+            height:80px;
+            background-color:rgb(189,186,186);
+            display:flex;
+            position:sticky;
+            top:0px;
+        }
+
+        .nav4{
+            height: 45px;
+            background-color:rgb(97,91,97);
+            display:flex;
+            align-items:center;
+        }
+
+        .nav-left{
+            width:100%;
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+
+        .box{
+            height:40px;
+            width:120px;
+            border-radius:30px;
+            margin-left:200px;
+            border:3px solid white;
+            background-image:url(https://imgs.search.brave.com/z9X0vIBM2XLeXpvWZzz7BsSuTSGB1Xz9TLoLbZWkjJg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9i/NGQzYWMyMzQ4MzUy/MzMuWTNKdmNDd3hN/amt3TERFd01Ea3NN/ekEyTERFMS5qcGc);
+            background-size:cover;
+            background-position:center;
+        }
+
+        .box2{
+            height:50px;
+            width:1200px;
+            border-radius:5px;
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+
+        .search{
+            height:40px;
+            width:75%;
+            margin-right:200px;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .sear,.options{
+            height:30px;
+            width:110px;
+            border-radius:50px;
+            background-color:wheat;
+            border:1.5px solid black;
+            margin-right:100px;
+            text-align:center;
+        }
+
+        ul{
+            display:flex;
+            list-style:none;
+        }
+
+        a{
+            padding-left:15px;
+            text-decoration:none;
+            color:#eae099;
+        }
+
+        .container1{
+            display:grid;
+            grid-template-columns:150px 300px 150px;
+            margin-top:20px;
+            grid-template-rows:100px 100px;
+            gap:16px;
+            padding:20px;
+            border:2px solid WHITE;
+            border-radius:20px;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(6,1fr);
+            margin-top:70px;
+            grid-template-rows:500px;
+            gap:16px;
+            padding:20px;
+            border:2px solid black;
+            border-radius:20px;
+        }
+
+        .tem{
+            background-color:#5d5b4b;
+            border:2px solid WHITE;
+            padding:1rem;
+            border-radius:20px;
+            cursor: pointer;
+        }
+
+        .photo{
+            background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/veerabhadrudu-et00455003-1778489518.jpg);
+            height:390px;
+            border-radius:15px;
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            text-align: right;
+            font-size: x-large;
+            color:gold;
+           
+           
+        }
+
+        .des{
+            height:50px;
+            background-color:rgb(244,170,121);
+            border-radius:5px;
+            text-align:center;
+        }
+
+        .leftbox{
+            width:50%;
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .rightbox{
+            width:50%;
+            display:flex;
+            justify-content:space-around;
+        }
+        
+        body{background:#0f0f0f;}
+        .nav{background:#111827;}
+        .nav4{background:#1f2937;}
+        .tem{background:#1e293b;}
+        .des{background:#f59e0b;}
+        a{color:white;}
+        
+        /*Styles 
+        body{background:#111111;}
+        .nav{background:#3b0000;}
+        .nav4{background:#5c0000;}
+        .tem{background:#1f1f1f;}
+        .des{background:#991b1b;}
+        a{color:#fca5a5;}
+        
+        body{background:#141414;}
+        .nav{background:#000;}
+        .nav4{background:#1f1f1f;}
+        .tem{background:#222;border:2px solid #e50914;}
+        .des{background:#e50914;}
+        a{color:white;}
+        
+                    
+                    body{background:#eaf4ff;}
+                    .nav{background:#003566;}
+                    .nav4{background:#00509d;}
+                    .tem{background:white;}
+                    .des{background:#4cc9f0;}
+                    a{color:white;}
+                    
+                    body{background:#1a1a1a;}
+                    .nav{background:#ed1d24;}
+                    .nav4{background:#202020;}
+                    .tem{background:#2b2b2b;}
+                    .des{background:#f7d117;}
+                    a{color:white;}
+                    
+                    body{background:#120f1f;}
+                    .nav{background:#2d1b4e;}
+                    .nav4{background:#452c75;}
+                    .tem{background:#24153d;}
+                    .des{background:#8b5cf6;}
+                    a{color:white;}
+*/
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav-left">
+
+            <div class="box"></div>
+
+            <div class="box2">
+
+                <div class="search">
+                    <input type="search" class="search" placeholder="Search Here">
+                </div>
+
+                <div class="sear">
+                    <select name="options" class="sear">
+                        <option value="1">Nellore</option>
+                        <option value="2">Vadodara</option>
+                        <option value="3">Ongole</option>
+                        <option value="4">Tirupati</option>
+                        <option value="5">Kadapa</option>
+                    </select>
+                </div>
+
+                <div class="sear">
+                    <input type="submit" value="Search" class="sear" style="cursor:pointer">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="nav4">
+
+        <div class="leftbox">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="rightbox">
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Crime</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h1 style="color:red">Book Your Show Now : )</h1>
+
+    <div class="container1" style="background-image: url(https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1780057841447_chainsmokersweb.jpg);">
+       
+    </div>
+
+    <div class="container">
+        <div class="tem">
+            <div class="photo"> <b>3.5 / 5.0</b> </div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Veerabhadrudu</h1>
+            </div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/raja-shivaji-et00387899-1777267945.jpg);"><b>4.3 / 5.0</b></div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Raja Shivaji</h1>
+            </div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/blast-zone-et00500209-1779358795.jpg);"><b>3.9 / 5.0</b></div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Blast Zone</h1>
+            </div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/trikaala--script-of-god-et00433991-1739772954.jpg);"><b>3.7 / 5.0</b></div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Trikaala</h1>
+            </div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kabanda-et00493449-1777523349.jpg);"><b>3.0 / 5.0</b></div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Kabanda</h1>
+            </div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dhurandhar-the-revenge-et00478890-1772893614.jpg);"><b>3.1 / 5.0</b></div>
+            <br>
+            <div class="des">
+                <h1 style="color:black">Durandhar - 2</h1>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/pushpa-2-the-rule-et00356724-1737184762.jpg');"><b>3.6 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">Pushpa 2</h1></div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/devara--part-1-et00310216-1712750637.jpg');"><b>3.2 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">Devara</h1></div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/game-changer-et00311772-1731311322.jpg');"><b>3.4 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">Game Changer</h1></div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg');"><b>4.0 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">Salaar</h1></div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kalki-2898-ad-et00352941-1718275859.jpg');"><b>3.9 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">Kalki 2898 AD</h1></div>
+        </div>
+
+        <div class="tem">
+            <div class="photo" style="background-image:url('https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/rrr-et00094579-1700135873.jpg');"><b>4.5 / 5.0</b></div>
+            <br>
+            <div class="des"><h1 style="color:black">RRR</h1></div>
+        </div>
+
+</div>
+
+</body>
+</html>
